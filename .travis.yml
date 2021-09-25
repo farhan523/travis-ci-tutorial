@@ -1,16 +1,35 @@
 language: node_js
-node_js : 
- - "stable"
-
+node_js:
+  - stable
+cache:
+  directories:
+    - node_modules
 script:
-   -npm install
-   -npm run build 
-
+  - yarn test:unit
+before_deploy:
+  - npm install netlify-cli -g
+  - yarn build
 deploy:
-  provider: netlify
-  skip_cleanip: true
-  domain: https://keen-rosalind-35db14.netlify.app/
-  project: ./build/
-
+  provider: script
+  edge: true
+  script: netlify deploy --dir=dist --prod
   on:
     branch: master
+
+
+# language: node_js
+# node_js : 
+#  - "stable"
+
+# script:
+#    -npm install
+#    -npm run build 
+
+# deploy:
+#   provider: netlify
+#   skip_cleanip: true
+#   domain: https://keen-rosalind-35db14.netlify.app/
+#   project: ./build/
+
+#   on:
+#     branch: master
