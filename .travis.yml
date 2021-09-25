@@ -8,9 +8,10 @@ before_deploy:
   - npm install netlify-cli -g
   - npm run build
 deploy:
-  provider: script
-  edge: true
-  script: netlify deploy --dir=dist --prod
+  provider: netlify
+  site: keen-rosalind-35db14
+  auth: 37e94e6a-0073-4b88-9ee4-6b9b5776fc12
+  edge: true # opt in to dpl v2
   on:
     branch: master
 
