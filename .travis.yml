@@ -7,9 +7,9 @@ script:
    -npm run build 
 
 deploy:
-  provider: surge
+  provider: netlify
   skip_cleanip: true
-  domain: next-lizards.surge.sh
+  domain: https://keen-rosalind-35db14.netlify.app/
   project: ./build/
 
   on:
