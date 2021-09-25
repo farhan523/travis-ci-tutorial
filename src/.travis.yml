@@ -1,0 +1,18 @@
+language: node_js
+node_js : 
+ - "stable"
+
+
+ script:
+  - npm install
+  - npm run build 
+
+
+  deploy:
+  provider: netlify
+  skip_cleanip: true
+  domain: https://614f18d58b8ed4140bae3054--keen-rosalind-35db14.netlify.app
+  project: ./build/
+
+  on:
+    branch: master
