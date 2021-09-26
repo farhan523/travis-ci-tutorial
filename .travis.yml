@@ -9,7 +9,7 @@ script:
 deploy:
   provider: surge
   skip_cleanip: true
-  domain: alcoholic-spring.surge.sh
+  domain: pumped-care.surge.sh
   project: ./build/
 
   on:
