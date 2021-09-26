@@ -10,7 +10,7 @@ deploy:
   provider: surge
   skip_cleanip: true
   domain: alcoholic-spring.surge.sh
-  project: /build/
+  project: ./build/
 
   on:
     branch: master
