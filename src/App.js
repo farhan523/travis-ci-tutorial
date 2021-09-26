@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <h1>helloo worlds2</h1>
       <h1 style={{ color: 'red' }}>hello worlds2</h1>
-    </div >
+    </div>
   );
 }
 
